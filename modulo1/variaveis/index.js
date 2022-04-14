@@ -1,5 +1,6 @@
-1
 /*
+
+1
 
 let a = 10
 let b = 10
@@ -42,7 +43,7 @@ alert(`Voce recebe ${t/p} por hora`)
 sugestoes (p) valorHoraTrabalhada /// (t)valorDia
 
 
-*/
+
 
 
 
@@ -60,14 +61,16 @@ console.log(typeof idade)
 
 
 
-/* resposta - indefinido, nenhum valor 
-foi declarado para nome, apenas variavel */
+ resposta - indefinido, nenhum valor 
+foi declarado para nome, apenas variavel
 
 
 
 
 
+*/
 
 
-
-
+let idade =32
+idade = idade + 1;
+console.log(idade)
