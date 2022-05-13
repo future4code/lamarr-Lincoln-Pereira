@@ -24,7 +24,6 @@ function retornaArrayOrdenado(array) {
    return array.sort(ordenarArray)
 }
 
-
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
   
@@ -57,10 +56,27 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
    
+    let pares = [];
+    for (let i = 0; pares.length < n; i += 2) {
+        pares.push(i);
+    }
+    return pares;
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+        return "Equilátero"
+    }
+
+    if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+        return "Isósceles"
+    }
+
+    if (ladoA !== ladoB && ladoB !== ladoC){
+        return "Escaleno"
+    }
 
 }
 
@@ -89,6 +105,14 @@ function retornaPessoaAnonimizada(pessoa) {
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
    
+    let pessoasAutorizadas = [];
+    for (item of pessoas) {
+      if (item.altura >= 1.5 && item.idade > 14 && item.idade <= 60) {
+        pessoasAutorizadas.push(item);
+      }
+    }
+    return pessoasAutorizadas;
+
 }
 
 // EXERCÍCIO 13B
