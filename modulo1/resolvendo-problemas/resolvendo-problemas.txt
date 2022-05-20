@@ -1,0 +1,22 @@
+7 Passos Fundamentais 
+
+1. Ter Atenção no Enunciado - 
+Ler quantas vezes necessarias para retornar da forma mais simplificada.
+
+2. Retirar Informações Relevantes
+Identificar as informacoes relevantes para facilitar no que focar no codigo
+
+3. Pensar nas Entradas e Saídas
+pensar qual a melhor forma de chegar ate o usuario, e tbm deixar facil o entendimento do programador, ou proximo programador
+
+4. Fazer Um Esquema Visual
+depois de juntar as informaçoes, é importante projetar a sequencia do codigo. Mesmo que for desenhando ou apensar fazendo na cabeça, antes de passar pro codigo. facilita na sequencia do codigo.
+
+5. Criar Um Código Feio 
+criar o codigo que ira ser testado, precisa ser funcional
+
+6. Testar: Força-Bruta
+testar...
+
+7. Refatorar
+nesse item, é onde podemos deixar o codigo mais complexo, mais estruturado e mais bonito.  com menos linhas e masi direto ao ponto.
