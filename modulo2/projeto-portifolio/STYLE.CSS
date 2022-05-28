@@ -1,0 +1,72 @@
+* {
+    font-family: 'Courier Prime', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    float: auto;
+}
+
+.perfil {
+    width: 13%;
+}
+.mensagem-ola {
+    margin: 25px;
+    text-align: center;
+    color: #1494d3;
+    position: relative;
+}
+.texto {
+    margin: 25px;
+    text-align: center;
+    text-indent: 0.5%;
+}
+.habilidades {
+    color: #ffd99e;
+    margin: 25px;
+    text-align: center;
+}
+.content-grids{
+    text-align: center;
+    width:100%;
+    margin:auto;
+    display:flex;
+}
+.content-grids .col{
+    flex:1;
+}
+.img-habilidades {
+    width: 25%;
+}
+.redes-sociais {
+    margin: 25px;
+    text-align: center;
+}
+.icone {
+    margin: 25px;
+    width: 30px;
+}
+.projetos-img1 {
+    width: 25%;
+    position: relative;
+  
+}
+.projetos-img2 {
+    width: 18%;
+}
+.projetos {
+    color: #040936; 
+    margin: 25px;
+    text-align: center; 
+}
+#formulario {
+    margin: 25px;
+    text-align: center;
+}
+.texto-blackjack {
+    margin: 5%;
+    text-align: center;
+}
+.texto-loja {
+    margin: 5%;
+    text-align: center;
+}
