@@ -2,8 +2,7 @@
 import Card from './components/Card/Card';
 import { Header } from './components/Header/Header';
 import { GlobalStyle } from './GlobalStyle';
-import { DetailsPage } from './pages/DetailsPage';
-import { Homepage } from './pages/Homepage';
+import { Homepage } from './pages/Homepage/Homepage';
 
 
 
@@ -12,7 +11,7 @@ function App() {
     <div ClassName="App">
       <GlobalStyle/>
       <Homepage/>
-      {/* <DetailsPage/> */}
+      
     </div>
   );
 }
