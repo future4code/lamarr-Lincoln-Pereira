@@ -10,4 +10,17 @@ export const HomePageContainer = styled.div`
         paddind: 1rem;
     }
 
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 40%;
+        margin: auto;
+
+        button {
+            margin-top: 5px;
+            padding: 5px;
+        }
+    }
+
 `

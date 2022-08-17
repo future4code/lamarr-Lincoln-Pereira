@@ -9,27 +9,55 @@ import { useState } from 'react';
 function App() {
 
   const [characters, setCharacters] = useState ( results )
+  const [image, setImage]      =useState("")
+  const [name, setName]        =useState("")
+  const [species, setSpecies]  =useState("")
 
-  const addCharacter = () => {
+  const handleInputImage =   (event) => setImage (event.target.value)
+  const handleInputName =    (event) => setName  (event.target.value)
+  const handleInputSpecies = (event) =>setSpecies(event.target.value)
+
+  const addCharacter = (event) => {
+    event.preventDefault()
+
     const newCharacter = {
-      "id": 20,
-      "name": "Rick Sanchez",
-      "species": "Human",
-      "origin": {
-          "name": "Earth"
+      id: Date.now(),
+      name,
+      species,
+      origin: {
+      name: "Earth"
       },
-      "image": "https://rickandmortyapi.com/api/character/avatar/20.jpeg"
+      image
     }
 
     const newCharactersList = [...characters, newCharacter]
     setCharacters(newCharactersList)
 
+    setImage("")
+    setName("")
+    setSpecies("")
+
   }
+
+  const removeCharacter = (id) => {
+    const filteredList = characters.filter (char =>{
+      return char.id !== id
+    })
+
+    setCharacters(filteredList)
+  }
+
 
   return (
     <div ClassName="App">
       <GlobalStyle/>
-      <Homepage characters={characters}/>      
+      <Homepage 
+      characters={characters}
+      states={{image, name, species}}
+      handlers={{handleInputImage, handleInputName, handleInputSpecies}}
+      addCharacter= {addCharacter}
+      removeCharacter={removeCharacter}
+      />      
       
     </div>
   );
