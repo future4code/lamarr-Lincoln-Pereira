@@ -5,17 +5,28 @@ import { GlobalStyle } from './GlobalStyle';
 import { Homepage } from './pages/Homepage/Homepage';
 import { results } from './data/data'
 import { useState } from 'react';
+import { DetailsPage } from './pages/DetailsPage/DetailsPage';
 
 function App() {
 
   const [characters, setCharacters] = useState ( results )
-  const [image, setImage]      =useState("")
-  const [name, setName]        =useState("")
-  const [species, setSpecies]  =useState("")
+  const [image, setImage]                =useState("")
+  const [name, setName]                  =useState("")
+  const [species, setSpecies]            =useState("")
+  const [query, setQuery]                =useState("")
+  const [orderParam, setOrderParam]      =useState("")
+  const [page, setPage]                  =useState("homepage")
+  const [id, setId]                      =useState(0)
 
-  const handleInputImage =   (event) => setImage (event.target.value)
-  const handleInputName =    (event) => setName  (event.target.value)
-  const handleInputSpecies = (event) =>setSpecies(event.target.value)
+  const handleInputImage =      (event) => setImage (event.target.value)
+  const handleInputName =       (event) => setName  (event.target.value)
+  const handleInputSpecies =    (event) =>setSpecies(event.target.value)
+  const handleInputQuery =      (event) =>setQuery  (event.target.value)
+  const handleInputOrderParam = (event) =>setOrderParam (event.target.value)
+
+  const changePage = (page, id) => 
+  setPage(page)
+  setId (id)
 
   const addCharacter = (event) => {
     event.preventDefault()
@@ -47,18 +58,30 @@ function App() {
     setCharacters(filteredList)
   }
 
+  const renderPage = () => {
+    switch(page) {
+      case 'homepage' :
+        return <Homepage 
+        characters={characters}
+        states={{image, name, species, query, orderParam}}
+        handlers={{handleInputImage, handleInputName, handleInputSpecies, handleInputQuery, handleInputOrderParam}}
+        addCharacter= {addCharacter}
+        removeCharacter={removeCharacter}
+        changePage={changePage}
+        />
+      case 'detailspage' :
+        return <DetailsPage
+          characters={characters}
+          id={id}
+          changePage={changePage}
+      />
+    }
+  }
 
   return (
     <div ClassName="App">
       <GlobalStyle/>
-      <Homepage 
-      characters={characters}
-      states={{image, name, species}}
-      handlers={{handleInputImage, handleInputName, handleInputSpecies}}
-      addCharacter= {addCharacter}
-      removeCharacter={removeCharacter}
-      />      
-      
+       {renderPage()}
     </div>
   );
 }
