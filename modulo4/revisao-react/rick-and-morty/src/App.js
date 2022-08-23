@@ -24,10 +24,10 @@ function App() {
   const handleInputQuery =      (event) =>setQuery  (event.target.value)
   const handleInputOrderParam = (event) =>setOrderParam (event.target.value)
 
-  const changePage = (page, id) => 
+  const changePage = (page, id) => {
   setPage(page)
   setId (id)
-
+  }
   const addCharacter = (event) => {
     event.preventDefault()
 
