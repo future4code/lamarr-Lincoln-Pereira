@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import axios from 'axios';
+import styled, {createGlobalStyle} from 'styled-components';
+import RouterPage from "./router/RouterPage"
 
-function App() {
+const GlobalStyle = createGlobalStyle`
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+`;
+
+const ContainerApp = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContainerApp >
+      <GlobalStyle />
+      <RouterPage />
+    </ContainerApp>
   );
 }
 
